@@ -1,0 +1,31 @@
+.page-temp-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    width: 60%;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-main {
+    grid-column: 1/2;
+}
+
+.page-side-up, .page-side-down {
+    grid-column: 2/3;
+}
+
+.sort-bar {
+    width: 100%;
+}
+
+.info-side {
+    width: 100%;
+    text-align: center;
+}
+
+.info-side-text {
+    display: inline-block;
+    padding: 10px;
+}

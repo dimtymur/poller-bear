@@ -17,6 +17,6 @@ class View {
             extract($this->view_data);
             include VIEWS . $this->view_file . ".phtml";
             return true;
-        } return false;
+        }
     }
 }

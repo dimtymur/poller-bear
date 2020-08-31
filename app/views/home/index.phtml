@@ -1,8 +1,15 @@
 <?php
 $title = "Home";
 include_once LAYOUTS . "header.phtml";
-?>
+include_once LAYOUTS . "sort_bar.phtml"; ?>
 
-<h1> Home Page </h1>
+<?php include_once LAYOUTS . "side_up.phtml"; ?>
+
+<div class="theme-box info-side">
+    <a class="info-side-text" href="#"> ♥ </a>
+    <a class="info-side-text" href="#"> ♡ </a>
+</div>
+
+<?php include_once LAYOUTS . "side_down.phtml"; ?>
 
 <?php include_once LAYOUTS . "footer.phtml";

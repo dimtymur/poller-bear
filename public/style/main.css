@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+  font-family: monospace;
+  color: white;
+  margin: 0;
+  font-size: var(--font-m);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.theme-box {
+    background-color: var(--back-color);
+    border-bottom: 1px var(--theme-color) solid;
+}
+
+.position-right {
+    right: 0;
+}

@@ -1,0 +1,30 @@
+.header-main {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px var(--theme-color) solid;
+}
+
+.header-right {
+    float: right;
+}
+
+.header-search {
+    background-color: var(--back-color);
+    border: none;
+    border-bottom: 1px var(--theme-color) dashed;
+    color: white;
+    font-size: var(--font-l);
+    width: 15%;
+    margin-left: 15px;
+}
+
+.header-item {
+    display: inline-block;
+    font-size: var(--font-l);
+    padding: 15px;
+}
+.header-item:hover {
+    cursor: pointer;
+    background-color: var(--theme-color);
+}

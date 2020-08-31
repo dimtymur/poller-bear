@@ -1,0 +1,28 @@
+@media screen and (max-width: 40rem) {
+    .header-item {
+        padding: 10px;
+    }
+
+    .header-search {
+        margin-left: 10px;
+        width: 25%;
+    }
+
+    .page-temp-main {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .page-main {
+        grid-column: 1/2;
+    }
+
+    .page-side-up {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .page-side-down {
+        grid-column: 1/2;
+    }
+}
