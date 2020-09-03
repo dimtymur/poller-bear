@@ -5,15 +5,11 @@
     border-bottom: 2px var(--theme-color) solid;
 }
 
-.header-right {
-    float: right;
-}
-
 .header-search {
     background-color: var(--back-color);
     border: none;
     border-bottom: 1px var(--theme-color) dashed;
-    color: white;
+    color: var(--font-color);
     font-size: var(--font-l);
     width: 15%;
     margin-left: 15px;

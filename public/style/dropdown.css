@@ -1,8 +1,11 @@
 .dropdown {
     display: inline-block;
-}
-.dropdown:focus {
+    position: relative;
     outline: none;
+}
+.dropdown:focus .dropdown-cont, .dropdown:focus .dropdown-btn {
+    background-color: var(--theme-color);
+    display: block;
 }
 
 .dropdown-btn {
@@ -11,11 +14,6 @@
 .dropdown-btn:hover {
     background-color: var(--theme-color);
     cursor: pointer;
-}
-
-.dropdown:focus .dropdown-cont, .dropdown:focus .dropdown-btn {
-    background-color: var(--theme-color);
-    display: block;
 }
 
 .dropdown-cont {

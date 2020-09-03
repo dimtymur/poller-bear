@@ -1,0 +1,27 @@
+.poll-bar-cont:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.poll-bar {
+    overflow: hidden;
+    background-color: var(--theme-color);
+    border-radius: 10px;
+}
+.poll-bar:hover {
+    cursor: pointer;
+}
+.poll-bar:hover .poll-voted {
+    width: 100%;
+}
+
+.poll-voted {
+    padding: 5px;
+    width: 33%;
+    background-color: var(--theme-color-d);
+    transition: 0.3s ease-in;
+}
+
+.poll-bar-amt {
+    float: left;
+    padding: 5px;
+}

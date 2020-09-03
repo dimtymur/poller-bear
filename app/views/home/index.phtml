@@ -1,14 +1,8 @@
 <?php
 $title = "Home";
 include_once LAYOUTS . "header.phtml";
-include_once LAYOUTS . "sort_bar.phtml"; ?>
-
-<?php include_once LAYOUTS . "side_up.phtml"; ?>
-
-<div class="theme-box info-side">
-    <a class="info-side-text" href="#"> ♥ </a>
-    <a class="info-side-text" href="#"> ♡ </a>
-</div>
+include_once VIEWS . "common" . DIRECTORY_SEPARATOR . "sort_bar.phtml";
+include_once VIEWS . "post" . DIRECTORY_SEPARATOR . "post.phtml"; ?>
 
 <?php include_once LAYOUTS . "side_down.phtml"; ?>
 

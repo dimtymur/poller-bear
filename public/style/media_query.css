@@ -1,16 +1,23 @@
-@media screen and (max-width: 40rem) {
-    .header-item {
-        padding: 10px;
+@media screen and (max-width: 60rem) {
+    .page-temp-main {
+        width: 95%;
     }
 
     .header-search {
         margin-left: 10px;
         width: 25%;
     }
+}
+
+@media screen and (max-width: 40rem) {
+    .header-item {
+        padding: 10px;
+    }
 
     .page-temp-main {
-        width: 95%;
         grid-template-columns: 1fr;
+        margin-top: 70px;
+        width: 100%;
     }
 
     .page-main {

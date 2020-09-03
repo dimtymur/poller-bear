@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/page.css">
     <link rel="stylesheet" href="/style/media_query.css">
+    <link rel="stylesheet" href="/style/media.css">
+    <link rel="stylesheet" href="/style/post.css">
+    <link rel="stylesheet" href="/style/poll.css">
 </head>
 <body>
     <header class="theme-box header-main">
         <div class="header-item"> Home </div>
         <input class="header-search" name="" placeholder="search...">
-        <div class="header-right">
+        <div class="float-right">
             <?php if (empty($_SESSION["user_id"])) { ?>
                 <div class="header-item"> Login </div>
             <?php } ?>

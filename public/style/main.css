@@ -1,19 +1,23 @@
 body {
-  background-color: black;
+  background-color: var(--back-color-d);
   font-family: monospace;
-  color: white;
+  color: var(--font-color);
   margin: 0;
   font-size: var(--font-m);
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--font-color);
 }
 
 .theme-box {
     background-color: var(--back-color);
     border-bottom: 1px var(--theme-color) solid;
+}
+
+.float-right {
+    float: right;
 }
 
 .position-right {

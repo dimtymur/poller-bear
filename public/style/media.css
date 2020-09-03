@@ -1,0 +1,40 @@
+.sort-bar {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.media {
+    margin-bottom: 20px;
+}
+
+.media-cont {
+    padding: 10px;
+}
+
+.media-bar-item {
+    display: inline-block;
+    padding: 10px;
+}
+.media-bar-item:hover {
+    cursor: pointer;
+}
+
+.media-text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.media-section {
+    padding: 10px;
+    background-color: var(--back-color-l);
+    border-radius: 10px;
+}
+
+.media-bar-icon {
+    width: 20px;
+    filter: var(--icon-invert);
+}
+
+.media-bar-icon-value {
+    display: inline;
+}
