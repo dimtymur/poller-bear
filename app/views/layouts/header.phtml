@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="/style/media_query.css">
     <link rel="stylesheet" href="/style/media.css">
     <link rel="stylesheet" href="/style/post.css">
+    <link rel="stylesheet" href="/style/comment.css">
     <link rel="stylesheet" href="/style/poll.css">
 </head>
 <body>
     <header class="theme-box header-main">
-        <div class="header-item"> Home </div>
-        <input class="header-search" name="" placeholder="search...">
+        <a href="/" class="header-item">
+            <img class="invert-icon header-logo" src="/img/icons/logo.png">
+        </a>
+        <input class="main-input header-input" name="" placeholder="search...">
         <div class="float-right">
             <?php if (empty($_SESSION["user_id"])) { ?>
                 <div class="header-item"> Login </div>

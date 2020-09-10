@@ -1,0 +1,31 @@
+<form class="theme-box comment-cont">
+    <textarea class="block-middle main-input main-textarea media-textarea" name=""
+              placeholder="comment on the post..."></textarea>
+    <button class="block-right main-button media-button" type="submit" name="button"> COMMENT </button>
+</form>
+<div class="theme-box page-item media">
+    <?php include VIEWS . "comment" . DIRECTORY_SEPARATOR . "comment_cont.phtml" ?>
+    <div class="reply-cont">
+        <form class="media-section reply-section">
+            <textarea class="block-middle main-input main-textarea media-textarea" name=""
+            placeholder="reply to the comment..."></textarea>
+            <button class="block-right main-button media-button" type="submit" name="button"> REPLY </button>
+        </form>
+        <div class="media-section reply-section">
+            <?php include VIEWS . "comment" . DIRECTORY_SEPARATOR . "reply_cont.phtml" ?>
+        </div>
+    </div>
+</div>
+<div class="theme-box page-item media">
+    <?php include VIEWS . "comment" . DIRECTORY_SEPARATOR . "comment_cont.phtml" ?>
+    <div class="reply-cont">
+        <form class="media-section reply-section">
+            <textarea class="block-middle main-input main-textarea media-textarea" name=""
+            placeholder="reply to the comment..."></textarea>
+            <button class="block-right main-button media-button" type="submit" name="button"> REPLY </button>
+        </form>
+        <div class="media-section reply-section">
+            <?php include VIEWS . "comment" . DIRECTORY_SEPARATOR . "reply_cont.phtml" ?>
+        </div>
+    </div>
+</div>

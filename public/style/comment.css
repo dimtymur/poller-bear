@@ -1,0 +1,12 @@
+.reply-section {
+    margin: 10px;
+}
+
+.comment-cont {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.reply-cont {
+    display: none;
+}
