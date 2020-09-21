@@ -13,7 +13,7 @@ a {
 
 .theme-box {
     background-color: var(--back-color);
-    border-bottom: 1px var(--theme-color) solid;
+    border: 1px var(--back-color-l) solid;
 }
 
 .float-right {

@@ -1,30 +1,42 @@
-<div class="media-bar">
-    <div class="media-bar-item"> user_name </div>
-    <div class="float-right">
-        <div class="dropdown" tabindex="0">
-            <div class="dropdown-btn"> ••• </div>
-            <ul class="dropdown-cont position-right">
-                <li class="dropdown-item"> Delete </li>
-                <li class="dropdown-item"> Edit </li>
-            </ul>
+<div class="media comment">
+    <div class="media-bar">
+        <div class="media-bar-item"> user_name </div>
+        <div class="float-right">
+            <div class="dropdown" tabindex="0">
+                <div class="dropdown-btn"> ••• </div>
+                <ul class="dropdown-cont position-right">
+                    <li class="dropdown-item"> Delete </li>
+                    <li class="dropdown-item"> Edit </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-<div class="media-cont">
-    <div class="media-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        nisi ut aliquip ex ea commodo consequat.
+    <div class="media-cont">
+        <div class="media-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+        </div>
     </div>
-</div>
-<div class="media-bar">
-    <div class="media-bar-item">
-        <img class="invert-icon media-bar-icon" src="/img/icons/heart-icon.png">
-        <div class="media-bar-icon-value"> 99 </div>
+    <div class="media-bar">
+        <div class="media-bar-item media-bar-like">
+            <img class="invert-icon media-bar-icon" src="/img/icons/heart-icon.png" title="unchecked">
+            <div class="media-bar-icon-value"> 99 </div>
+        </div>
+        <div class="media-bar-item comment-bar-reply">
+            <img class="invert-icon media-bar-icon" src="/img/icons/reply-icon.png">
+            <div class="media-bar-icon-value"> 99 </div>
+        </div>
     </div>
-    <div class="media-bar-item comment-bar-item-reply">
-        <img class="invert-icon media-bar-icon" src="/img/icons/reply-icon.png">
-        <div class="media-bar-icon-value"> 99 </div>
+    <div class="reply-cont">
+        <form class="media-section reply-section">
+            <textarea class="block-middle main-input main-textarea media-textarea" name=""
+            placeholder="reply to the comment..."></textarea>
+            <button class="block-right main-button media-button" type="submit" name="button"> REPLY </button>
+        </form>
+        <div class="media-section reply-section">
+            <?php include VIEWS . "comment" . DIRECTORY_SEPARATOR . "reply_cont.phtml" ?>
+        </div>
     </div>
 </div>

@@ -6,6 +6,7 @@
     overflow: hidden;
     background-color: var(--theme-color);
     border-radius: 10px;
+    border: 1px var(--theme-color-d) solid;
 }
 .poll-bar:hover {
     cursor: pointer;
@@ -15,6 +16,7 @@
 }
 
 .poll-voted {
+    pointer-events: none;
     padding: 5px;
     width: 33%;
     background-color: var(--theme-color-d);
@@ -23,5 +25,5 @@
 
 .poll-bar-amt {
     float: left;
-    padding: 5px;
+    padding: 6px;
 }

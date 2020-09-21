@@ -1,9 +1,9 @@
 <?php
 $title = "Home";
 include_once LAYOUTS . "header.phtml";
-include_once VIEWS . "common" . DIRECTORY_SEPARATOR . "sort_bar.phtml";
-include_once VIEWS . "post" . DIRECTORY_SEPARATOR . "post.phtml"; ?>
 
-<?php include_once LAYOUTS . "side_down.phtml"; ?>
+include_once VIEWS . "post" . DIRECTORY_SEPARATOR . "post_sort_bar.phtml";
+include VIEWS . "post" . DIRECTORY_SEPARATOR . "post_box.phtml";
+include_once LAYOUTS . "side_down.phtml";
 
-<?php include_once LAYOUTS . "footer.phtml";
+include_once LAYOUTS . "footer.phtml";

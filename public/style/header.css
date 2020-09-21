@@ -9,6 +9,7 @@
 .header-input {
     width: 15%;
     margin-left: 15px;
+    font-size: var(--font-l);
 }
 
 .header-item {
