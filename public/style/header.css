@@ -3,7 +3,7 @@
     top: 0;
     width: 100%;
     border-bottom: 2px var(--theme-color) solid;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header-input {
@@ -16,9 +16,9 @@
     display: inline-block;
     font-size: var(--font-l);
     padding: 15px;
+    cursor: pointer;
 }
 .header-item:hover {
-    cursor: pointer;
     background-color: var(--theme-color);
 }
 

@@ -3,10 +3,11 @@
 }
 
 .poll-bar {
+    position: relative;
+    text-overflow: ellipsis;
     overflow: hidden;
-    background-color: var(--theme-color);
     border-radius: 10px;
-    border: 1px var(--theme-color-d) solid;
+    background-color: var(--back-color);
 }
 .poll-bar:hover {
     cursor: pointer;
@@ -16,14 +17,37 @@
 }
 
 .poll-voted {
+    color: white;
     pointer-events: none;
-    padding: 5px;
+    padding: 15px;
     width: 33%;
-    background-color: var(--theme-color-d);
+    background-color: var(--theme-color);
+    border-radius: 10px;
     transition: 0.3s ease-in;
 }
 
 .poll-bar-amt {
-    float: left;
-    padding: 6px;
+    padding: 5px;
+    padding-right: 0;
+}
+
+.poll-info-text-cont {
+    color: var(--font-color-l);
+}
+
+.poll-info-text {
+    display: inline-block;
+    margin-top: 5px;
+    padding-right: 5px;
+}
+
+.poll-info-text:not(:last-child) {
+    border-right: 6px var(--font-color-l) dotted;
+}
+
+.poll-bar-text {
+    position: absolute;
+    padding: 5px;
+    padding-left: 7px;
+    pointer-events: none;
 }

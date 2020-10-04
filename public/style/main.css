@@ -1,9 +1,9 @@
 body {
-  background-color: var(--back-color-d);
-  font-family: monospace;
-  color: var(--font-color);
-  margin: 0;
-  font-size: var(--font-m);
+    background-color: var(--back-color-d);
+    font-family: Noto Sans;
+    color: var(--font-color);
+    margin: 0;
+    font-size: var(--font-m);
 }
 
 a {

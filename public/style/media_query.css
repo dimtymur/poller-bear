@@ -1,4 +1,4 @@
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 80rem) {
     .page-temp-main {
         width: 95%;
     }
@@ -9,7 +9,7 @@
     }
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 50rem) {
     .header-item {
         padding: 10px;
     }
@@ -22,20 +22,32 @@
     .page-temp-main {
         grid-template-columns: 1fr;
         margin-top: 70px;
-        width: 100%;
+        width: 99%;
     }
 
     .page-main {
-        grid-column: 1/2;
         margin-bottom: 0;
     }
 
-    .page-side-up {
+    .page-side {
         grid-column: 1/2;
         grid-row: 1/2;
     }
 
-    .page-side-down {
-        grid-column: 1/2;
+    .page-side-info {
+        display: none;
+    }
+
+    .profile-section {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .profile-menu-desc {
+        margin: 10px;
+    }
+
+    .footer-main {
+        display: block;
     }
 }

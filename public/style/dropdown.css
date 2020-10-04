@@ -2,6 +2,7 @@
     display: inline-block;
     position: relative;
     outline: none;
+    cursor: pointer;
 }
 .dropdown:focus .dropdown-cont, .dropdown:focus .dropdown-btn {
     background-color: var(--theme-color);
@@ -13,7 +14,6 @@
 }
 .dropdown-btn:hover {
     background-color: var(--theme-color);
-    cursor: pointer;
 }
 
 .dropdown-cont {
@@ -30,6 +30,5 @@
     padding-right: 40px;
 }
 .dropdown-item:hover {
-    cursor: pointer;
     background-color: var(--theme-color-d);
 }

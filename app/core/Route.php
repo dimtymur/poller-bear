@@ -60,7 +60,7 @@ class Route {
                 call_user_func_array([$this->controller, $this->action], $this->params);
                 return true;
             }
-        }
+        } return false;
     }
 
     static public function setRoute(string $route, $action) : void {

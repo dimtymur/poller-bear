@@ -3,7 +3,7 @@
     --back-color: hsl(0, 0%, 10%);
     --back-color-d: hsl(0, 0%, 5%);
     --theme-color: hsl(190, 60%, 40%);
-    --theme-color-d: hsl(190, 60%, 30%);
+    --theme-color-d: hsl(190, 60%, 25%);
     --font-m: 14px;
     --font-l: 16px;
     --font-xl: 18px;
@@ -17,7 +17,7 @@
     --back-color: hsl(0, 0%, 75%);
     --back-color-d: hsl(0, 0%, 80%);
     --theme-color: hsl(190, 60%, 40%);
-    --theme-color-d: hsl(190, 60%, 35%);
+    --theme-color-d: hsl(190, 60%, 30%);
     --font-m: 14px;
     --font-l: 16px;
     --font-xl: 18px;
