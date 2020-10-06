@@ -1,8 +1,8 @@
 body {
     background-color: var(--back-color-d);
-    font-family: Noto Sans;
-    color: var(--font-color);
     margin: 0;
+    color: var(--font-color);
+    font-family: Noto Sans;
     font-size: var(--font-m);
 }
 
@@ -41,9 +41,9 @@ a {
 
 .main-input {
     background-color: rgba(0, 0, 0, 0);
+    color: var(--font-color);
     border: none;
     border-bottom: 1px var(--theme-color) dashed;
-    color: var(--font-color);
     font-size: var(--font-m);
 }
 
@@ -54,14 +54,14 @@ a {
 
 .main-button {
     background-color: var(--theme-color);
-    border: none;
-    border-bottom: 3px var(--theme-color-d) solid;
-    border-radius: 5px;
-    font-size: var(--font-m);
     padding: 5px;
     padding-right: 10px;
     padding-left: 10px;
+    font-size: var(--font-m);
     color: var(--font-color);
+    border: none;
+    border-bottom: 3px var(--theme-color-d) solid;
+    border-radius: 5px;
 }
 .main-button:hover {
     cursor: pointer;

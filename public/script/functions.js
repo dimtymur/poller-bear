@@ -27,3 +27,7 @@ const getUriParam = function(key, uri=window.location.href) {
     if (uri.indexOf(key + "=") == -1) return "";
     return uri.split(key + "=")[1].split("&")[0];
 };
+
+const execUriParamMatch = function(key, uri, func_match) {
+    if (getUriParam(key, uri) == getUriParam(key)) func_match();
+};

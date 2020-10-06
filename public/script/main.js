@@ -3,11 +3,14 @@ const LOVE_IMG = {
     "unchecked": "/img/icons/heart-icon.png"
 };
 
-const profileNavItems = document.querySelectorAll(".profile-menu-nav-item");
-if (profileNavItems)
-    for (let profileNavItem of profileNavItems)
-        if (getUriParam("url", profileNavItem.href) == getUriParam("url"))
-            profileNavItem.style.borderBottom = "2px var(--theme-color) solid";
+const profileMenuNavItems = document.querySelectorAll(".profile-menu-nav-item");
+if (profileMenuNavItems)
+    for (let profileMenuNavItem of profileMenuNavItems)
+        execUriParamMatch(
+            "url",
+            profileMenuNavItem.href,
+            () => profileMenuNavItem.style.borderBottom = "2px var(--theme-color) solid"
+        );
 
 const medias = document.querySelectorAll(".media");
 if (medias)
