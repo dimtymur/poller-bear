@@ -34,15 +34,15 @@
         grid-row: 1/2;
     }
 
-    .page-side-info {
+    .page-thin-block {
+        display: block;
+    }
+
+    .page-thin-none {
         display: none;
     }
 
     .profile-menu-desc {
         margin: 10px;
-    }
-
-    .footer-main {
-        display: block;
     }
 }

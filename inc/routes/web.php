@@ -7,6 +7,22 @@ Route::setRoute("/", function() {
     Controller::view("home.index");
 });
 
+Route::setRoute("/signup", function() {
+    Controller::view("auth.signup_page");
+});
+
+Route::setRoute("/login", function() {
+    Controller::view("auth.login_page");
+});
+
+Route::setRoute("/password/reset", function() {
+    Controller::view("auth.pwd_reset_page");
+});
+
+Route::setRoute("/password/verify", function() {
+    Controller::view("auth.pwd_verify_page");
+});
+
 Route::setRoute("/post", function() {
     Controller::view("post.post_page");
 });
