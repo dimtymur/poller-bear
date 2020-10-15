@@ -23,6 +23,10 @@ Route::setRoute("/password/verify", function() {
     Controller::view("auth.pwd_verify_page");
 });
 
+Route::setRoute("/settings", function() {
+    Controller::view("user.settings_page");
+});
+
 Route::setRoute("/post", function() {
     Controller::view("post.post_page");
 });

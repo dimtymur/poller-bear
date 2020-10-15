@@ -1,0 +1,70 @@
+<?php
+$title = "Settings";
+include_once LAYOUTS . "header_wide.phtml"; ?>
+
+<div class="settings-cont">
+    <div class="main-title settings-text settings-section-title"> User Information </div>
+    <div class="settings-section settings-menu-section settings-piece">
+        <div class="settings-menu-item">
+            <div class="main-title"> Username </div>
+            <input class="main-input" type="text">
+        </div>
+        <div class="settings-menu-item">
+            <div class="main-title"> Email </div>
+            <input class="main-input" type="email">
+        </div>
+    </div>
+    <div class="main-title settings-text settings-section-title"> Password </div>
+    <div class="settings-section settings-menu-section settings-piece">
+        <div class="settings-menu-item">
+            <div class="main-title"> Old Password </div>
+            <input class="main-input" type="password">
+        </div>
+        <div class="settings-menu-item">
+            <div class="main-title"> New Password </div>
+            <input class="main-input" type="password">
+        </div>
+        <div class="settings-menu-item">
+            <div class="main-title"> New Password (Repeat) </div>
+            <input class="main-input" type="password">
+        </div>
+    </div>
+    <button class="main-button block-right" type="submit" name="button"> Save Changes </button>
+</div>
+<div class="settings-cont">
+    <div class="main-title settings-text settings-section-title"> Appearance </div>
+    <div class="settings-section">
+        <div class="settings-item settings-piece">
+            <div class="settings-item-key"> Light / Dark Theme </div>
+            <div class="dropdown settings-item-value position-right" tabindex="0">
+                <div class="dropdown-btn"> Dark &nbsp▼ </div>
+                <ul class="dropdown-cont position-right">
+                    <li class="dropdown-item"> Dark </li>
+                    <li class="dropdown-item"> Light </li>
+                </ul>
+            </div>
+        </div>
+        <div class="settings-item settings-piece">
+            <div class="settings-item-key"> Color Theme </div>
+            <div class="dropdown settings-item-value position-right" tabindex="0">
+                <div class="dropdown-btn"> Blue &nbsp▼ </div>
+                <ul class="dropdown-cont position-right">
+                    <li class="dropdown-item"> Blue </li>
+                    <li class="dropdown-item"> Green </li>
+                    <li class="dropdown-item"> Red </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="settings-cont">
+    <div class="main-title settings-text settings-section-title"> Delete Account </div>
+    <div class="settings-text">
+        This action will delete your account, posts, comments, likes, votes
+        and all other actions made by you, irreversably. Press the button bellow
+        to send a verification to your email for deleting your account.
+    </div>
+    <button class="main-button block-right" type="submit" name="button"> Delete Account </button>
+</div>
+
+<?php include_once LAYOUTS . "footer_wide.phtml";

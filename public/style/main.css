@@ -39,6 +39,10 @@ a {
     filter: var(--icon-invert);
 }
 
+.main-title {
+    font-weight: bold;
+}
+
 .main-input {
     background-color: rgba(0, 0, 0, 0);
     color: var(--font-color);

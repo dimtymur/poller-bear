@@ -4,25 +4,29 @@
     outline: none;
     cursor: pointer;
 }
-.dropdown:focus .dropdown-cont, .dropdown:focus .dropdown-btn {
-    display: block;
+.dropdown:focus .dropdown-btn, .dropdown:focus .dropdown-cont {
     background-color: var(--theme-color);
+}
+.dropdown:focus .dropdown-btn {
+    box-shadow: inset 0 1px 0 1px var(--theme-color-d);
+}
+.dropdown:focus .dropdown-cont {
+    display: block;
 }
 
 .dropdown-btn {
     padding: 10px;
 }
-.dropdown-btn:hover {
-    background-color: var(--theme-color);
-}
 
 .dropdown-cont {
+    z-index: 2;
     display: none;
     position: absolute;
-    background-color: var(--back-color);
     padding: 0;
     margin: 0;
     list-style: none;
+    border: 1px var(--theme-color-d) solid;
+    border-top: none;
 }
 
 .dropdown-item {

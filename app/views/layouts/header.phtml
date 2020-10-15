@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/style/poll.css">
     <link rel="stylesheet" href="/style/profile.css">
     <link rel="stylesheet" href="/style/auth.css">
+    <link rel="stylesheet" href="/style/settings.css">
     <link rel="stylesheet" href="/style/media_query.css">
 </head>
 <body>
@@ -25,17 +26,12 @@
         </a>
         <input class="main-input header-input" name="" placeholder="search...">
         <div class="float-right">
-            <?php if (empty($_SESSION["user_id"])) { ?>
-                <a class="header-item" href="?url=login"> Login </a>
-            <?php } ?>
+            <a class="header-item" href="?url=login"> Login </a>
             <div class="dropdown" tabindex="0">
                 <div class="dropdown-btn header-item">•&nbsp•&nbsp•</div>
                 <ul class="dropdown-cont position-right">
                     <li class="dropdown-item"> Settings </li>
                     <li class="dropdown-item"> About </li>
-                    <?php if (!empty($_SESSION["user_id"])) { ?>
-                        <div class="dropdown-item"> Logout </div>
-                    <?php } ?>
                 </ul>
             </div>
         </div>

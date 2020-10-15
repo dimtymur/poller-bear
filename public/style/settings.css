@@ -1,0 +1,48 @@
+.settings-cont {
+    background-color: var(--back-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.settings-piece {
+    background-color: var(--back-color-l);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.settings-section-title {
+    font-size: var(--font-xl);
+    text-align: center;
+}
+
+.settings-text {
+    padding: 0 0 20px 0;
+}
+
+.settings-section {
+    margin-bottom: 40px;
+}
+
+.settings-menu-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+}
+
+.settings-item {
+    position: relative;
+}
+
+.settings-item-key {
+    display: inline-block;
+}
+
+.settings-item-value {
+    position: absolute;
+    top: 0;
+}
+
+.settings-menu-item {
+    margin: 10px;
+}
