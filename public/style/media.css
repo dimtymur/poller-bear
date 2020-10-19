@@ -11,8 +11,7 @@
 }
 
 .media-text {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
 }
 
 .media-section {
@@ -39,12 +38,15 @@
 }
 
 .media-date {
-    padding: 5px;
-    padding-right: 10px;
+    padding: 5px 10px;
     color: var(--font-color-l);
 }
 
 .media-bar {
     display: inline-block;
     width: 100%;
+}
+
+.media-info-text-cont {
+    color: var(--font-color-l);
 }

@@ -4,7 +4,19 @@ use App\Core\Route;
 use App\Core\Controller;
 
 Route::setRoute("/", function() {
-    Controller::view("home.index");
+    Controller::view("home.home_page");
+});
+
+Route::setRoute("/settings", function() {
+    Controller::view("home.settings_page");
+});
+
+Route::setRoute("/search/posts", function() {
+    Controller::view("home.search_posts_page");
+});
+
+Route::setRoute("/search/users", function() {
+    Controller::view("home.search_users_page");
 });
 
 Route::setRoute("/signup", function() {
@@ -21,10 +33,6 @@ Route::setRoute("/password/reset", function() {
 
 Route::setRoute("/password/verify", function() {
     Controller::view("auth.pwd_verify_page");
-});
-
-Route::setRoute("/settings", function() {
-    Controller::view("user.settings_page");
 });
 
 Route::setRoute("/post", function() {

@@ -1,7 +1,3 @@
-.poll-bar-cont:not(:last-child) {
-    margin-bottom: 10px;
-}
-
 .poll-bar {
     position: relative;
     overflow: hidden;
@@ -16,6 +12,10 @@
     width: 100%;
 }
 
+.poll-bar-cont:not(:last-child) {
+    margin-bottom: 10px;
+}
+
 .poll-voted {
     width: 33%;
     background-color: var(--theme-color);
@@ -28,20 +28,6 @@
 
 .poll-bar-amt {
     padding: 5px 0 5px 5px;
-}
-
-.poll-info-text-cont {
-    color: var(--font-color-l);
-}
-
-.poll-info-text {
-    display: inline-block;
-    margin-top: 5px;
-    padding-right: 5px;
-}
-
-.poll-info-text:not(:last-child) {
-    border-right: 6px var(--font-color-l) dotted;
 }
 
 .poll-bar-text {
