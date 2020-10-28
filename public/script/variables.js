@@ -1,0 +1,69 @@
+const ROOT = document.documentElement;
+
+const LOVE_IMG = {
+    "checked": "/img/icons/heart-checked-icon.png",
+    "unchecked": "/img/icons/heart-icon.png"
+};
+
+const MAIN_THEME = {
+    "dark": () => {
+        ROOT.style.setProperty("--back-color-l", "hsl(0, 0%, 15%)");
+        ROOT.style.setProperty("--back-color", "hsl(0, 0%, 10%)");
+        ROOT.style.setProperty("--back-color-d", "hsl(0, 0%, 5%)");
+        ROOT.style.setProperty("--font-color", "hsl(0, 0%, 90%)");
+        ROOT.style.setProperty("--icon-invert", "invert(100%)");
+    },
+    "light": () => {
+        ROOT.style.setProperty("--back-color-l", "hsl(0, 0%, 70%)");
+        ROOT.style.setProperty("--back-color", "hsl(0, 0%, 75%)");
+        ROOT.style.setProperty("--back-color-d", "hsl(0, 0%, 80%)");
+        ROOT.style.setProperty("--font-color", "hsl(0, 0%, 15%)");
+        ROOT.style.setProperty("--icon-invert", "none");
+    }
+};
+
+const COLOR_THEME = {
+    "red": () => {
+        ROOT.style.setProperty("--theme-color", "hsl(360, 60%, 40%)");
+        ROOT.style.setProperty("--theme-color-d", "hsl(360, 60%, 25%)");
+    },
+    "green": () => {
+        ROOT.style.setProperty("--theme-color", "hsl(90, 60%, 40%)");
+        ROOT.style.setProperty("--theme-color-d", "hsl(90, 60%, 25%)");
+    },
+    "blue": () => {
+        ROOT.style.setProperty("--theme-color", "hsl(190, 60%, 40%)");
+        ROOT.style.setProperty("--theme-color-d", "hsl(190, 60%, 25%)");
+    }
+};
+
+const MAIN_THEME_SET = {
+    "dark": () => {
+        MAIN_THEME.dark();
+        localStorage.removeItem("main-theme");
+    },
+    "light": () => {
+        MAIN_THEME.light();
+        localStorage.setItem("main-theme", "light");
+    }
+};
+
+const COLOR_THEME_SET = {
+    "red": () => {
+        COLOR_THEME.red();
+        localStorage.setItem("color-theme", "red");
+    },
+    "green": () => {
+        COLOR_THEME.green();
+        localStorage.setItem("color-theme", "green");
+    },
+    "blue": () => {
+        COLOR_THEME.blue();
+        localStorage.removeItem("color-theme");
+    }
+};
+
+const SELECT_LIB = {
+    "main-theme-set": MAIN_THEME_SET,
+    "color-theme-set": COLOR_THEME_SET
+};

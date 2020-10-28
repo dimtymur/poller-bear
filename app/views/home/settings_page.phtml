@@ -36,22 +36,22 @@ include_once LAYOUTS . "header_wide.phtml"; ?>
     <div class="settings-section">
         <div class="settings-item settings-piece">
             <div class="settings-item-key"> Light / Dark Theme </div>
-            <div class="dropdown settings-item-value position-right" tabindex="0">
-                <div class="dropdown-btn"> Dark &nbsp▼ </div>
+            <div class="select dropdown settings-item-value position-right" tabindex="0">
+                <div class="dropdown-btn"> <em class="select-checked"></em> &nbsp▼ </div>
                 <ul class="dropdown-cont position-right">
-                    <li class="dropdown-item"> Dark </li>
-                    <li class="dropdown-item"> Light </li>
+                    <li class="select-item dropdown-item select{main-theme-set:dark} check{state:on}"> Dark </li>
+                    <li class="select-item dropdown-item select{main-theme-set:light} check{state:off}"> Light </li>
                 </ul>
             </div>
         </div>
         <div class="settings-item settings-piece">
             <div class="settings-item-key"> Color Theme </div>
-            <div class="dropdown settings-item-value position-right" tabindex="0">
-                <div class="dropdown-btn"> Blue &nbsp▼ </div>
+            <div class="select dropdown settings-item-value position-right" tabindex="0">
+                <div class="dropdown-btn"> <em class="select-checked"></em> &nbsp▼ </div>
                 <ul class="dropdown-cont position-right">
-                    <li class="dropdown-item"> Blue </li>
-                    <li class="dropdown-item"> Green </li>
-                    <li class="dropdown-item"> Red </li>
+                    <li class="select-item dropdown-item select{color-theme-set:red} check{state:off}"> Red </li>
+                    <li class="select-item dropdown-item select{color-theme-set:green} check{state:off}"> Green </li>
+                    <li class="select-item dropdown-item select{color-theme-set:blue} check{state:on}"> Blue </li>
                 </ul>
             </div>
         </div>
