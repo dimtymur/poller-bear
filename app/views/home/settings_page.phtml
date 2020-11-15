@@ -3,6 +3,32 @@ $title = "Settings";
 include_once LAYOUTS . "header_wide.phtml"; ?>
 
 <div class="theme-box settings-cont">
+    <div class="main-title settings-text settings-section-title"> Appearance </div>
+    <div class="settings-section">
+        <div class="settings-item settings-piece">
+            <div class="settings-item-key"> Light / Dark Theme </div>
+            <div class="select storage{local:main-theme} dropdown settings-item-value position-right" tabindex="0">
+                <div class="dropdown-btn"> <em class="select-checked"></em> &nbsp▼ </div>
+                <ul class="dropdown-cont position-right">
+                    <li class="select-item dropdown-item select{main-theme:dark} check{state:1}"> Dark </li>
+                    <li class="select-item dropdown-item select{main-theme:light} check{state:0}"> Light </li>
+                </ul>
+            </div>
+        </div>
+        <div class="settings-item settings-piece">
+            <div class="settings-item-key"> Color Theme </div>
+            <div class="select storage{local:color-theme} dropdown settings-item-value position-right" tabindex="0">
+                <div class="dropdown-btn"> <em class="select-checked"></em> &nbsp▼ </div>
+                <ul class="dropdown-cont position-right">
+                    <li class="select-item dropdown-item select{color-theme:red} check{state:0}"> Red </li>
+                    <li class="select-item dropdown-item select{color-theme:green} check{state:0}"> Green </li>
+                    <li class="select-item dropdown-item select{color-theme:blue} check{state:1}"> Blue </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="theme-box settings-cont">
     <div class="main-title settings-text settings-section-title"> User Information </div>
     <div class="settings-section settings-menu-section settings-piece">
         <div class="settings-menu-item">
@@ -30,32 +56,6 @@ include_once LAYOUTS . "header_wide.phtml"; ?>
         </div>
     </div>
     <button class="main-button block-right" type="submit" name="button"> Save Changes </button>
-</div>
-<div class="theme-box settings-cont">
-    <div class="main-title settings-text settings-section-title"> Appearance </div>
-    <div class="settings-section">
-        <div class="settings-item settings-piece">
-            <div class="settings-item-key"> Light / Dark Theme </div>
-            <div class="select dropdown settings-item-value position-right" tabindex="0">
-                <div class="dropdown-btn"> <em class="select-checked"></em> &nbsp▼ </div>
-                <ul class="dropdown-cont position-right">
-                    <li class="select-item dropdown-item select{main-theme-set:dark} check{state:on}"> Dark </li>
-                    <li class="select-item dropdown-item select{main-theme-set:light} check{state:off}"> Light </li>
-                </ul>
-            </div>
-        </div>
-        <div class="settings-item settings-piece">
-            <div class="settings-item-key"> Color Theme </div>
-            <div class="select dropdown settings-item-value position-right" tabindex="0">
-                <div class="dropdown-btn"> <em class="select-checked"></em> &nbsp▼ </div>
-                <ul class="dropdown-cont position-right">
-                    <li class="select-item dropdown-item select{color-theme-set:red} check{state:off}"> Red </li>
-                    <li class="select-item dropdown-item select{color-theme-set:green} check{state:off}"> Green </li>
-                    <li class="select-item dropdown-item select{color-theme-set:blue} check{state:on}"> Blue </li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </div>
 <div class="theme-box settings-cont">
     <div class="main-title settings-text settings-section-title"> Delete Account </div>

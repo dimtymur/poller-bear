@@ -1,8 +1,8 @@
 const ROOT = document.documentElement;
 
-const LOVE_IMG = {
-    "checked": "/img/icons/heart-checked-icon.png",
-    "unchecked": "/img/icons/heart-icon.png"
+const LIKE_IMG = {
+    "checked": "/img/icons/like-checked-icon.png",
+    "unchecked": "/img/icons/like-icon.png"
 };
 
 const MAIN_THEME = {
@@ -64,6 +64,11 @@ const COLOR_THEME_SET = {
 };
 
 const SELECT_LIB = {
-    "main-theme-set": MAIN_THEME_SET,
-    "color-theme-set": COLOR_THEME_SET
+    "main-theme": MAIN_THEME_SET,
+    "color-theme": COLOR_THEME_SET
+};
+
+const STORAGE_LIB = {
+    "local": (item) => localStorage.getItem(item),
+    "session": (item) => sessionStorage.getItem(item)
 };

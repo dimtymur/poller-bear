@@ -67,8 +67,6 @@ a {
     border: none;
     border-bottom: 3px var(--theme-color-d) solid;
     border-radius: 5px;
-}
-.main-button:hover {
     cursor: pointer;
 }
 .main-button:focus {

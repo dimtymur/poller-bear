@@ -4,68 +4,25 @@ if (mainTheme) MAIN_THEME[mainTheme]();
 let colorTheme = localStorage.getItem("color-theme");
 if (colorTheme) COLOR_THEME[colorTheme]();
 
-const selects = document.querySelectorAll(".select");
-if (selects)
-    for (let select of selects) {
-        let selectChecked = select.querySelector(".select-checked");
-        let selectItems = select.querySelectorAll(".select-item");
-
-        for (let selectItem of selectItems)
-            if (isChecked(selectItem)) {
-                selectChecked.innerText = selectItem.innerText;
-                selectItem.style.display = "none";
-                break;
-            }
-
-        select.addEventListener("click", (event) => {
-            if (event.target.className.indexOf("select-item") == -1) return;
-            for (let selectItem of selectItems) {
-                selectItem.className = setClassPairValue(selectItem.className, "check", "off");
-                selectItem.style.display = "block";
-            }
-
-            useClassPair(SELECT_LIB, event.target.className, "select");
-
-            checkSwitch(
-                event.target,
-                () => {
-                    selectChecked.innerText = event.target.innerText;
-                    event.target.style.display = "none";
-                },
-                () => {
-                    selectChecked.innerText = event.target.innerText;
-                    event.target.style.display = "none";
-                }
-            );
-        });
-    }
-
-const profileMenuNavItems = document.querySelectorAll(".profile-menu-nav-item");
-if (profileMenuNavItems)
-    for (let profileMenuNavItem of profileMenuNavItems)
-        execUriParamMatch(
-            "url",
-            profileMenuNavItem.href,
-            () => profileMenuNavItem.style.borderBottom = "2px var(--theme-color) solid"
-        );
-
 const medias = document.querySelectorAll(".media");
 if (medias)
     for (let media of medias) {
         let likeItem = media.querySelector(".media-bar-like");
         let likeIcon = media.querySelector(".media-bar-icon");
+        let checkPair = getPair(likeIcon.className, "check");
 
-        checkAction(
-            likeIcon,
-            () => likeIcon["src"] = LOVE_IMG["checked"],
-            () => likeIcon["src"] = LOVE_IMG["unchecked"]
+        useCheck(
+            checkPair,
+            () => likeIcon["src"] = LIKE_IMG["checked"],
+            () => likeIcon["src"] = LIKE_IMG["unchecked"]
         );
 
         likeItem.addEventListener("click", () => {
-            checkSwitch(
-                likeIcon,
-                () => likeIcon["src"] = LOVE_IMG["checked"],
-                () => likeIcon["src"] = LOVE_IMG["unchecked"]
+            likeIcon.className = switchCheck(
+                likeIcon.className,
+                getPair(likeIcon.className, "check"),
+                () => likeIcon["src"] = LIKE_IMG["checked"],
+                () => likeIcon["src"] = LIKE_IMG["unchecked"]
             );
         });
     }
@@ -87,9 +44,11 @@ if (pollConts)
         let pollBars = pollCont.querySelectorAll(".poll-bar");
 
         for (let pollBar of pollBars) {
+            let checkPair = getPair(pollBar.className, "check");
             let pollVoted = pollBar.querySelector(".poll-voted");
-            checkAction(
-                pollBar,
+
+            useCheck(
+                checkPair,
                 () => pollVoted.style.backgroundColor = "var(--theme-color-d)",
                 () => pollVoted.style.backgroundColor = "var(--theme-color)"
             );
@@ -97,19 +56,70 @@ if (pollConts)
 
         pollCont.addEventListener("click", (event) => {
             if (event.target.className.indexOf("poll-bar") == -1) return;
-            let pollBarCheckValue = parseClassPair(getClassPair(event.target.className, "check"))[1];
+
+            let checkPair = getPair(event.target.className, "check");
+            let pollVoted = event.target.querySelector(".poll-voted");
 
             for (let pollBar of pollBars) {
                 pollBar.querySelector(".poll-voted").style.backgroundColor = "var(--theme-color)";
-                pollBar.className = setClassPairValue(pollBar.className, "check", "off");
+                pollBar.className = setTextPairValue(pollBar.className, getPair(pollBar.className, "check"), 0);
             }
 
-            event.target.className = setClassPairValue(event.target.className, "check", pollBarCheckValue);
-            let pollVoted = event.target.querySelector(".poll-voted");
-            checkSwitch(
-                event.target,
+            event.target.className = switchCheck(
+                event.target.className,
+                checkPair,
                 () => pollVoted.style.backgroundColor = "var(--theme-color-d)",
                 () => pollVoted.style.backgroundColor = "var(--theme-color)"
             );
         });
     }
+
+const selects = document.querySelectorAll(".select");
+if (selects)
+    for (let select of selects) {
+        let selectChecked = select.querySelector(".select-checked");
+        let selectItems = select.querySelectorAll(".select-item");
+        let storagePair = getPair(select.className, "storage");
+
+        if (storagePair) {
+            let storagePairValue = usePair(STORAGE_LIB, storagePair);
+            if (storagePairValue)
+                for (let selectItem of selectItems) {
+                    let checkPair = getPair(selectItem.className, "check");
+
+                    if (parsePair(getPair(selectItem.className, "select"))[1] == storagePairValue)
+                        selectItem.className = setTextPairValue(selectItem.className, checkPair, 1);
+                    else selectItem.className = setTextPairValue(selectItem.className, checkPair, 0);
+                }
+        }
+
+        for (let selectItem of selectItems)
+            if (isChecked(getPair(selectItem.className, "check"))) {
+                selectChecked.innerText = selectItem.innerText; break;
+            }
+
+        select.addEventListener("click", (event) => {
+            if (event.target.className.indexOf("select-item") == -1) return;
+
+            for (let selectItem of selectItems)
+                selectItem.className = setTextPairValue(selectItem.className, getPair(selectItem.className, "check"), 0);
+
+            usePair(SELECT_LIB, getPair(event.target.className, "select"));
+
+            event.target.className = switchCheck(
+                event.target.className,
+                getPair(event.target.className, "check"),
+                () => selectChecked.innerText = event.target.innerText,
+                () => selectChecked.innerText = event.target.innerText
+            );
+        });
+    }
+
+const profileMenuNavItems = document.querySelectorAll(".profile-menu-nav-item");
+if (profileMenuNavItems)
+    for (let profileMenuNavItem of profileMenuNavItems)
+        execUriParamMatch(
+            "url",
+            profileMenuNavItem.href,
+            () => profileMenuNavItem.style.borderBottom = "2px var(--theme-color) solid"
+        );
