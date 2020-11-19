@@ -5,7 +5,7 @@ const LIKE_IMG = {
     "unchecked": "/img/icons/like-icon.png"
 };
 
-const MAIN_THEME = {
+const MAIN_THEME_SET = {
     "dark": () => {
         ROOT.style.setProperty("--back-color-l", "hsl(0, 0%, 15%)");
         ROOT.style.setProperty("--back-color", "hsl(0, 0%, 10%)");
@@ -22,7 +22,7 @@ const MAIN_THEME = {
     }
 };
 
-const COLOR_THEME = {
+const COLOR_THEME_SET = {
     "red": () => {
         ROOT.style.setProperty("--theme-color", "hsl(360, 60%, 40%)");
         ROOT.style.setProperty("--theme-color-d", "hsl(360, 60%, 25%)");
@@ -37,7 +37,7 @@ const COLOR_THEME = {
     }
 };
 
-const MAIN_THEME_SET = {
+const MAIN_THEME = {
     "dark": () => {
         MAIN_THEME.dark();
         localStorage.removeItem("main-theme");
@@ -48,7 +48,7 @@ const MAIN_THEME_SET = {
     }
 };
 
-const COLOR_THEME_SET = {
+const COLOR_THEME = {
     "red": () => {
         COLOR_THEME.red();
         localStorage.setItem("color-theme", "red");
@@ -64,8 +64,8 @@ const COLOR_THEME_SET = {
 };
 
 const SELECT_LIB = {
-    "main-theme": MAIN_THEME_SET,
-    "color-theme": COLOR_THEME_SET
+    "main-theme": MAIN_THEME,
+    "color-theme": COLOR_THEME
 };
 
 const STORAGE_LIB = {

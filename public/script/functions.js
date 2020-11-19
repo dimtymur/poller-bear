@@ -6,6 +6,18 @@ const displaySwitch = (element, switch_from, switch_to) => {
 const getUriParam = (key, uri=window.location.href) =>
     (uri.indexOf(key + "=") == -1) ? "" : uri.split(key + "=")[1].split("&")[0];
 
+const addUriParam = (key, valueArg) => {
+    let value  = valueArg.toString();
+    let uri    = window.location.href;
+    let delim  = uri.indexOf("?") == -1 ? "?" : "&";
+    let pair   = key + "=" + value.trim().replace(/\s+/g, "+");
+    if (uri.indexOf(key + "=") == -1) window.location.href = uri + delim + pair;
+    else {
+        let regex = new RegExp(key + "=([^&]*)?");
+        window.location.href = uri.replace(regex, pair);
+    }
+};
+
 const execUriParamMatch = (key, uri, func_match) =>
     (getUriParam(key, uri) == getUriParam(key)) ? func_match() : null;
 

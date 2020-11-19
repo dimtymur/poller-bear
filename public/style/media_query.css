@@ -21,8 +21,8 @@
 
     .page-temp-main {
         grid-template-columns: 1fr;
-        margin-top: 70px;
         width: 99%;
+        margin-top: 70px;
     }
 
     .page-main {
@@ -44,5 +44,9 @@
 
     .profile-menu-desc {
         margin: 10px;
+    }
+
+    .settings-input {
+        width: 100%;
     }
 }

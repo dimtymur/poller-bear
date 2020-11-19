@@ -123,3 +123,13 @@ if (profileMenuNavItems)
             profileMenuNavItem.href,
             () => profileMenuNavItem.style.borderBottom = "2px var(--theme-color) solid"
         );
+
+const dropdownUriParams = document.querySelectorAll(".dropdown-uriparam");
+if (dropdownUriParams)
+    for (let dropdownUriParam of dropdownUriParams)
+        dropdownUriParam.addEventListener("click", (event) => {
+            if (!getPair(event.target.className, "uriparam")) return;
+
+            let uriParamPair = parsePair(getPair(event.target.className, "uriparam"));
+            addUriParam(uriParamPair[0], uriParamPair[1]);
+        });

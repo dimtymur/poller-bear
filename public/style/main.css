@@ -55,6 +55,7 @@ a {
 .main-textarea {
     height: 25px;
     resize: vertical;
+    font-family: Noto Sans;
 }
 
 .main-button {
