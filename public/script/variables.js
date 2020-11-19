@@ -39,26 +39,26 @@ const COLOR_THEME_SET = {
 
 const MAIN_THEME = {
     "dark": () => {
-        MAIN_THEME.dark();
+        MAIN_THEME_SET.dark();
         localStorage.removeItem("main-theme");
     },
     "light": () => {
-        MAIN_THEME.light();
+        MAIN_THEME_SET.light();
         localStorage.setItem("main-theme", "light");
     }
 };
 
 const COLOR_THEME = {
     "red": () => {
-        COLOR_THEME.red();
+        COLOR_THEME_SET.red();
         localStorage.setItem("color-theme", "red");
     },
     "green": () => {
-        COLOR_THEME.green();
+        COLOR_THEME_SET.green();
         localStorage.setItem("color-theme", "green");
     },
     "blue": () => {
-        COLOR_THEME.blue();
+        COLOR_THEME_SET.blue();
         localStorage.removeItem("color-theme");
     }
 };
