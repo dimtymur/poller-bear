@@ -1,32 +1,25 @@
 @media screen and (max-width: 80rem) {
-    .page-temp-main {
-        width: 95%;
+    .header-input {
+        width: 25%;
+        margin-left: var(--space-m);
     }
 
-    .header-input {
-        margin-left: 10px;
-        width: 25%;
-    }
+    .page-temp-main { width: 95%; }
 }
 
 @media screen and (max-width: 50rem) {
-    .header-item {
-        padding: 10px;
+    .header-logo {
+        width: 30px;
+        margin: -10px;
     }
 
-    .header-logo {
-        margin: -10px;
-        width: 30px;
-    }
+    .header-item { padding: var(--space-m); }
 
     .page-temp-main {
         grid-template-columns: 1fr;
+
         width: 99%;
         margin-top: 70px;
-    }
-
-    .page-main {
-        margin-bottom: 0;
     }
 
     .page-side {
@@ -34,19 +27,13 @@
         grid-row: 1/2;
     }
 
-    .page-thin-block {
-        display: block;
-    }
+    .page-main { margin-bottom: 0; }
 
-    .page-thin-none {
-        display: none;
-    }
+    .page-thin-block { display: block; }
 
-    .profile-menu-desc {
-        margin: 10px;
-    }
+    .page-thin-none { display: none; }
 
-    .settings-input {
-        width: 100%;
-    }
+    .profile-menu-desc { margin: var(--space-m); }
+
+    .settings-input { width: 100%; }
 }

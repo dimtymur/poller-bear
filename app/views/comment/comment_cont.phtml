@@ -31,12 +31,15 @@
         </div>
     </div>
     <div class="reply-cont">
-        <form class="media-section reply-section">
+        <form class="main-section reply-section media-cont">
             <textarea class="main-input main-textarea media-textarea block-middle" name=""
                       placeholder="reply to the comment..."></textarea>
             <button class="main-button media-button block-right" type="submit" name="button"> Reply </button>
         </form>
-        <div class="media-section reply-section">
+        <div class="main-section reply-section">
+            <?php include VIEWS . "comment" . DIRECTORY_SEPARATOR . "reply_cont.phtml" ?>
+        </div>
+        <div class="main-section reply-section">
             <?php include VIEWS . "comment" . DIRECTORY_SEPARATOR . "reply_cont.phtml" ?>
         </div>
     </div>

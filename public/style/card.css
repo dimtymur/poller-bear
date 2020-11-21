@@ -1,33 +1,40 @@
 .card-box {
     width: 300px;
-    padding: 10px;
+    padding: var(--space-m);
     margin-top: 30px;
+
     border-bottom: 2px var(--theme-color) solid;
 }
 
 .card-input {
     width: 100%;
-    font-size: var(--font-l);
-    margin-bottom: 20px;
+    margin-bottom: var(--space-l);
+
+    font-size: var(--font-m);
 }
 
 .card-button {
     width: 100%;
-    margin-top: 10px;
-    font-size: var(--font-xl);
+    margin-top: var(--space-m);
+
+    font-size: var(--font-l);
 }
 
 .card-title {
-    padding: 10px 10px 20px 10px;
+    padding: var(--space-m);
+    padding-bottom: var(--space-l);
+
+    font-size: var(--font-l);
     text-align: center;
-    font-size: var(--font-xl);
 }
 
-.card-section {
-    padding: 10px 50px;
+.card-cont {
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .card-info-text-cont {
+    padding: var(--space-s);
+
     text-align: center;
-    margin: 5px;
 }

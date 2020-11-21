@@ -2,10 +2,10 @@
 $title = "Settings";
 include_once LAYOUTS . "header_wide.phtml"; ?>
 
-<div class="theme-box settings-cont">
-    <div class="main-title settings-text settings-section-title"> Appearance </div>
+<div class="theme-box settings-cont page-block">
+    <div class="main-title settings-text settings-title"> Appearance </div>
     <div class="settings-section">
-        <div class="settings-item settings-piece">
+        <div class="main-section settings-item">
             <div class="settings-item-key"> Light / Dark Theme </div>
             <div class="select storage{local:main-theme} dropdown settings-item-value position-right" tabindex="0">
                 <div class="dropdown-btn"> <em class="select-checked"></em> &nbsp▼ </div>
@@ -15,7 +15,7 @@ include_once LAYOUTS . "header_wide.phtml"; ?>
                 </ul>
             </div>
         </div>
-        <div class="settings-item settings-piece">
+        <div class="main-section settings-item">
             <div class="settings-item-key"> Color Theme </div>
             <div class="select storage{local:color-theme} dropdown settings-item-value position-right" tabindex="0">
                 <div class="dropdown-btn"> <em class="select-checked"></em> &nbsp▼ </div>
@@ -28,9 +28,10 @@ include_once LAYOUTS . "header_wide.phtml"; ?>
         </div>
     </div>
 </div>
-<div class="theme-box settings-cont">
-    <div class="main-title settings-text settings-section-title"> User Information </div>
-    <div class="settings-section settings-menu-section settings-piece">
+
+<div class="theme-box settings-cont page-block">
+    <div class="main-title settings-text settings-title"> User Information </div>
+    <div class="main-section settings-section settings-menu">
         <div class="settings-menu-item">
             <div class="main-title"> Username </div>
             <input class="main-input settings-input" type="text">
@@ -40,8 +41,8 @@ include_once LAYOUTS . "header_wide.phtml"; ?>
             <input class="main-input settings-input" type="email">
         </div>
     </div>
-    <div class="main-title settings-text settings-section-title"> Password </div>
-    <div class="settings-section settings-menu-section settings-piece">
+    <div class="main-title settings-text settings-title"> Password </div>
+    <div class="main-section settings-section settings-menu">
         <div class="settings-menu-item">
             <div class="main-title"> Old Password </div>
             <input class="main-input settings-input" type="password">
@@ -57,8 +58,9 @@ include_once LAYOUTS . "header_wide.phtml"; ?>
     </div>
     <button class="main-button block-right" type="submit" name="button"> Save Changes </button>
 </div>
-<div class="theme-box settings-cont">
-    <div class="main-title settings-text settings-section-title"> Delete Account </div>
+
+<div class="theme-box settings-cont page-block">
+    <div class="main-title settings-text settings-title"> Delete Account </div>
     <div class="settings-text">
         This action will delete your account, posts, comments, likes, votes
         and all other actions made by you, irreversably. Press the button bellow

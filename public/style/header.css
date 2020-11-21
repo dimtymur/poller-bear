@@ -1,29 +1,32 @@
 .header-main {
     z-index: 2;
     position: fixed;
-    width: 100%;
     top: 0;
+
+    width: 100%;
+
     border-bottom: 2px var(--theme-color) solid;
 }
 
 .header-input {
     width: 15%;
-    margin-left: 15px;
-    font-size: var(--font-l);
+    margin-left: var(--space-l);
+
+    font-size: var(--font-m);
 }
 
 .header-item {
     display: inline-block;
-    padding: 15px;
-    font-size: var(--font-l);
+    padding: var(--space-l);
+
+    font-size: var(--font-m);
+
     cursor: pointer;
 }
-.header-item:hover {
-    background-color: var(--theme-color);
-}
+.header-item:hover { background-color: var(--theme-color); }
 
 .header-logo {
     width: 40px;
     margin: -15px;
-    padding: 0 5px;
+    padding: 0 var(--space-s);
 }

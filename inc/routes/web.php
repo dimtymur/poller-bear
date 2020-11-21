@@ -28,11 +28,7 @@ Route::setRoute("/login", function() {
 });
 
 Route::setRoute("/password/reset", function() {
-    Controller::view("auth.pwd_reset_page");
-});
-
-Route::setRoute("/password/verify", function() {
-    Controller::view("auth.pwd_verify_page");
+    Controller::view("auth.reset_pwd_page");
 });
 
 Route::setRoute("/post", function() {

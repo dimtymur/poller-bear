@@ -1,36 +1,38 @@
-.poll-bar {
-    position: relative;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    background-color: var(--back-color);
-    border-radius: 10px;
-}
-.poll-bar:hover {
-    cursor: pointer;
-}
-.poll-bar:hover .poll-voted {
-    width: 100%;
-}
-
-.poll-bar-cont:not(:last-child) {
-    margin-bottom: 10px;
-}
+.poll-cont { padding: var(--space-m); }
 
 .poll-voted {
     width: 33%;
-    color: white;
-    pointer-events: none;
-    padding: 15px;
-    border-radius: 10px;
-    transition: 0.3s ease-in;
-}
+    padding: var(--space-l);
 
-.poll-bar-amt {
-    padding: 5px 0 5px 5px;
+    color: white;
+    border-radius: var(--radius-m);
+
+    pointer-events: none;
+    transition: 0.3s ease-in;
 }
 
 .poll-bar-text {
     position: absolute;
-    padding: 5px 7px;
+
+    padding: var(--space-s) var(--space-m);
+
     pointer-events: none;
 }
+
+.poll-bar {
+    position: relative;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    background-color: var(--back-color);
+    border-radius: var(--radius-m);
+
+    cursor: pointer;
+}
+.poll-bar:hover .poll-voted { width: 100%; }
+
+.poll-bar-cont:not(:last-child) { margin-bottom: var(--space-m); }
+
+.poll-bar-amt { padding: var(--space-s) 0 5px var(--space-s); }
