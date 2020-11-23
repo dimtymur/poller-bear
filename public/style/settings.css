@@ -14,19 +14,6 @@
 
 .settings-menu-item { padding: var(--space-l); }
 
-.settings-item {
-    position: relative;
-
-    padding: var(--space-m);
-    margin-bottom: var(--space-m);
-}
-
-.settings-item-value {
-    position: absolute;
-
-    top: 0;
-}
-
-.settings-item-key { display: inline-block; }
+.settings-menu-bar-value { margin: calc(-1 * var(--space-m)); }
 
 .settings-section:not(:last-child) { margin-bottom: 40px; }

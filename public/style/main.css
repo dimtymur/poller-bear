@@ -33,15 +33,18 @@ a {
     margin-right: auto;
 }
 
-.float-right { float: right; }
-
 .position-right { right: 0; }
 
-.inline-block { display: inline-block; }
+.float-right { float: right; }
 
 .invert-icon { filter: var(--icon-invert); }
 
 .main-title { font-weight: bold; }
+
+.main-section {
+    background-color: var(--back-color-l);
+    border-radius: var(--radius-s);
+}
 
 .main-input {
     background-color: rgba(0, 0, 0, 0);
@@ -88,7 +91,16 @@ a {
     border-right-style: dotted;
 }
 
-.main-section {
-    background-color: var(--back-color-l);
-    border-radius: var(--radius-s);
+.main-menu-bar {
+    margin-bottom: var(--space-m);
+    padding: var(--space-m);
+}
+
+.main-menu-bar-key { display: inline-block; }
+
+.main-menu-bar-value { float: right; }
+
+.main-menu-bar-icon {
+    width: var(--font-m);
+    padding-right: var(--space-s);
 }

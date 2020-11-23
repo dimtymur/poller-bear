@@ -47,21 +47,6 @@
     margin: var(--space-l);
 }
 
-.profile-menu-desc {
-    padding: var(--space-s) var(--space-m);
-    margin-bottom: var(--space-s);
-
-    background-color: var(--back-color-l);
-    border-radius: var(--radius-m);
-}
-
-.profile-menu-desc-icon {
-    width: var(--font-m);
-    padding-right: var(--space-s);
-}
-
-.profile-menu-desc-key { display: inline; }
-
-.profile-menu-desc-value { color: var(--font-color-l); }
+.profile-menu-bar { padding: var(--space-s) var(--space-m); }
 
 .profile-section { margin: var(--space-l) var(--space-m); }
