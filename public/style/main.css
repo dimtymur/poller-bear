@@ -87,8 +87,8 @@ a {
     padding-right: var(--space-s);
 }
 .main-info-text:not(:last-child) {
-    border-right-width: 6px;
-    border-right-style: dotted;
+    border-right-width: 1px;
+    border-right-style: solid;
 }
 
 .main-menu-bar {
